@@ -1,0 +1,122 @@
+Script started on 2021-10-27 23:17:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="132" LINES="33"]
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ vi file
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;33r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[33;1H"file" 4L, 43C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H{[2;9Hif(match ($12, verified))[3;17Hprint $14
+}
+[94m~                                                                                                                                   [6;1H~                                                                                                                                   [7;1H~                                                                                                                                   [8;1H~                                                                                                                                   [9;1H~                                                                                                                                   [10;1H~                                                                                                                                   [11;1H~                                                                                                                                   [12;1H~                                                                                                                                   [13;1H~                                                                                                                                   [14;1H~                                                                                                                                   [15;1H~                                                                                                                                   [16;1H~                                                                                                                                   [17;1H~                                                                                                                                   [18;1H~                                                                                                                                   [19;1H~                                                                                                                                   [20;1H~                                                                                                                                   [21;1H~                                                                                                                                   [22;1H~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [m[33;115H3,8-22[8CAll[3;22H[?25h[?25l[33;105H:[3;22H[33;1H[K[33;1H:[?2004h[?25hq![?25l[?2004l[23;2t[23;1t[33;1H[K[33;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ cat file
+{
+	if(match ($12, verified))
+		print $14
+}
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ awk -F "\t" -v verified=N -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ vi subFile
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;33r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[33;1H"subFile" 21L, 278C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1Hs/ the / /g
+s/ and / /g
+s/ was / /g
+s/ she / /g
+s/ for / /g
+s/ you / /g
+s/ this / /g
+s/ her / /g
+s/ will / /g
+s/ they / /g
+s/ that / /g
+s/ but / /g
+s/ about / /g
+s/ are / /g
+s/ not / /g
+s/ The / /g
+s/ his / /g
+s/<...\/>//g
+s/<...>//g
+s/[,\.:'"\(\)]/ /g
+s/\b[a-zA-Z]\{1,2\}\b//g
+[94m~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [m[33;115H20,9[10CAll[20;9H[?25h[?25l[33;105H~@k[20;9H[33;105H   [19;9H[33;115H19[19;9H[?25h[?25l[33;105H~@k[19;9H[33;105H   [18;9H[33;116H8[18;9H[?25h[?25l[33;105H~@k[18;9H[33;105H   [17;9H[33;116H7[17;9H[?25h[?25l[33;105Hi[17;9H[33;105H [17;9H[33;1H[1m-- INSERT --[m[33;13H[K[33;115H17,9[10CAll[17;9H[?25h[?25l[33;118H10[17;10H[?25h[?25l[33;119H1[17;11H[?25h[?25l[33;119H2[17;12H[?25h[?25l[18;32r[18;1H[L[1;33r[33;115H[K[33;115H18,1[10CAll[18;1H[?25h[?25l[19;32r[19;1H[4L[1;33r[18;1Hs/ with / /g
+s/ have / /g
+s/ one / /g
+s/ has / /g
+s/ what / /g[33;11H[1m(paste) --[m[33;115H[K[22;13H[?25h[?25l[23;32r[23;1H[5L[1;33r[23;1Hs/ would / /g
+s/ their / /g
+s/ This / /g
+s/ who / /g
+s/ can / [?25h[?25l/g
+s/ which / /g
+s/ its / /g
+s/ some / /g[30;13H[K[31;3H had / /g[31;12H[K[32;1Hs/ The / [32;10H[K[1;32r[1;1H[4M[1;33r[29;1Hs/<...\/>//g
+s/<...>//g
+s/[,\.:'"\(\)]/ /g
+s/\b[a-zA-Z]\{1,2\}\b//g[28;10H[?25h[?25l[1;32r[1;1H[2M[1;33r[27;32r[27;1H[2L[1;33r[26;10H/g
+s/ been / /g
+s/  / /g[33;11H[1m--a[m[33;13H[K[33;115H34,9[10CBot[28;9H[?25h[?25l[33;116H5[29;9H[?25h[?25l[33;116H6[30;9H[?25h[?25l[33;116H7[31;9H[?25h[33;1H[K[31;8H[?25l[33;105H^[[31;8H[33;105H  [31;9H[33;115H37,8[10CBot[31;8H[?25h[?25l[33;105H:[31;8H[33;105H[K[33;1H:[?2004h[?25hwq[?25l[?2004l"subFile" 38L, 491C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ cat subFile 
+s/ the / /g
+s/ and / /g
+s/ was / /g
+s/ she / /g
+s/ for / /g
+s/ you / /g
+s/ this / /g
+s/ her / /g
+s/ will / /g
+s/ they / /g
+s/ that / /g
+s/ but / /g
+s/ about / /g
+s/ are / /g
+s/ not / /g
+s/ The / /g
+s/ his / /g
+s/ with / /g
+s/ have / /g
+s/ one / /g
+s/ has / /g
+s/ what / /g
+s/ would / /g
+s/ their / /g
+s/ This / /g
+s/ who / /g
+s/ can / /g
+s/ which / /g
+s/ its / /g
+s/ some / /g
+s/ had / /g
+s/ The / /g
+s/ been / /g
+s/  / /g
+s/<...\/>//g
+s/<...>//g
+s/[,\.:'"\(\)]/ /g
+s/\b[a-zA-Z]\{1,2\}\b//g
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ sed -i -f subFile verified.txt
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ tr " " "\n" < verified.txt | sort | uniq -c| sort -n -r > ver_f
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ 
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ sed -i -f subFile unverified.txt
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ tr " " "\n" < unverified.txt | sort | uniq -c| sort -n -r > unver_f
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ 
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ head -n 10 ver_f unver_f
+==> ver_f <==
+   5674 
+    167 book
+     54 from
+     48 all
+     45 read
+     43 more
+     38 how
+     37 very
+     32 other
+     32 This
+
+==> unver_f <==
+   6497 
+    199 book
+     67 from
+     67 all
+     48 more
+     43 read
+     42 story
+     41 like
+     38 out
+     33 The
+]0;lis@f6linux11: ~/ws8[01;32mlis@f6linux11[00m:[01;34m~/ws8[00m$ exit
+
+Script done on 2021-10-27 23:19:02+00:00 [COMMAND_EXIT_CODE="0"]

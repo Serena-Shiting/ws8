@@ -1,0 +1,1000 @@
+ 1090  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,1; else print $1,0}' $i > $i.BINARY.txt; done
+ 1091  ls
+ 1092  vi 038550120X.txt.BINARY.txt 
+ 1093  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}’ $i > $i.BINARY.txt; done
+ 1094  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1095  head 0446672211.txt
+ 1096  head 0446672211.txt.BINARY.txt
+ 1097  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,1; else print $1,0}’ $i > $i.BINARY.txt; done
+ 1098  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1099  head 0446672211.txt.BINARY.txt
+ 1100  head 0446672211.txt
+ 1101  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,1; else print $1,0}' $i > $i.BINARY.txt; done
+ 1102  head 0446672211.txt
+ 1103  head 0446672211.txt.BINARY.txt
+ 1104  head 038529929X.txt
+ 1105  head 038529929X.txt.BINARY.txt
+ 1106  cd ~
+ 1107  script a3.txt
+ 1108  cd a3/PRODUCTS/
+ 1109  for i in `ls ??????????.txt`; do echo "$i `sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)]; }'`" ; done > median.txt
+ 1110  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1111  cd ..
+ 1112  ls
+ 1113  cd CUSTOMERS/
+ 1114  for i in `ls ??????????.txt`; do echo "$i `sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)]; }'`" ; done > median.txt
+ 1115  ls
+ 1116  for i in `ls ????????.txt`; do echo "$i `sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)]; }'`" ; done > median.txt
+ 1117  for i in `ls ????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1118  ls
+ 1119  cd datamash-1.3/
+ 1120  for FILE in ~/a3/CUSTOMERS/*.BINARY.txt; do CORR=`./datamash  -W ppearson 1:2 < $FILE`;echo "$FILE $CORR"; done > correlation.txt 
+ 1121  ls
+ 1122  correlation.txt
+ 1123  222.txt
+ 1124  for FILE in ~/a3/CUSTOMERS/*.BINARY.txt; do CORR=`./datamash  -W ppearson 1:2 < $FILE`;echo "$FILE $CORR"; done > 222.txt
+ 1125  ls
+ 1126  222.txt
+ 1127  vi 22.txt
+ 1128  for i in `ls *.BINARY.txt` ; do /datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1129  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1130  ls
+ 1131  cd ../CUSTOMERS/
+ 1132  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1133  ls
+ 1134  vi a3.txt
+ 1135  cp a3.txt a3.txt_1_2
+ 1136  ls
+ 1137  vi a3.txt_1_2 
+ 1138  script a3.txt
+ 1139  cd a3/PRODUCTS/
+ 1140  for i in `ls *.BINARY.txt` ; do /datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1141  for i in `ls *.BINARY.txt` ; do ../datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1142  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1143  ls
+ 1144  vi 0451526341.txt.BINARY.txt.corrnorm.txt
+ 1145  script a3.txt
+ 1146  lsscript a3.txt
+ 1147  script a3.txt
+ 1148  cd ../PRODUCTS/
+ 1149  ls
+ 1150  cp a3.txt ~/a3.txt_4
+ 1151  cd~
+ 1152  cd ~
+ 1153  ls
+ 1154  vi a3.txt_4 
+ 1155  cd a3/PRODUCTS/
+ 1156  for i in `ls ????????.corrnorm.txt`; do echo "$i $1"; done >123.txt
+ 1157  ls
+ 1158  for i in `ls ??????????.corrnorm.txt`; do echo "$i $1"; done >123.txt
+ 1159  for i in `ls ??????????.txt.BINARY.txt.corrnorm.txt`; do echo "$i $1"; done >123.txt
+ 1160  vi 123.txt
+ 1161  for i in `ls ??????????.txt.BINARY.txt.corrnorm.txt`; do echo "$i print{$1}"; done >123.txt
+ 1162  vi 123.txt
+ 1163  vi 0553272535.txt.BINARY.txt
+ 1164  vi 0525947647.txt.BINARY.txt.corrnorm.txt 
+ 1165  for i in `ls ??????????.txt.BINARY.txt.corrnorm.txt`; do echo "$i print{$0}"; done >123.txt
+ 1166  vi 123.txt
+ 1167  for i in `ls ??????????.txt.BINARY.txt.corrnorm.txt`; do echo "$i print{$1}"; done >123.txt
+ 1168  vi 123.txt
+ 1169  gnuplot
+ 1170  git clone -b branch-5-4-stable git://git.code.sf.net/p/gnuplot/gnuplot-main
+ 1171  ls
+ 1172  rm -r aa2
+ 1173  y
+ 1174  ls
+ 1175  rm 123.txt 
+ 1176  cd  gnuplot-main   
+ 1177  ls
+ 1178  plot '0060392452.BINARY.txt.help' with linespoints linestyle 1 linecolor 7 title "helpful", '0060392452.BINARY.txt.rating' with linespoints linestyle 1 linecolor 5 title "rating"
+ 1179  gnuplot-main '0060392452.BINARY.txt.help' with linespoints linestyle 1 linecolor 7 title "helpful", '0060392452.BINARY.txt.rating' with linespoints linestyle 1 linecolor 5 title "rating"
+ 1180  cd `
+ 1181  cd ~
+ 1182  cd gnuplot-main
+ 1183  ls
+ 1184  cd ~
+ 1185  vi README.emacs
+ 1186  vi README
+ 1187  vi Copyright
+ 1188  ls
+ 1189  cd a3
+ 1190  awk -F"\t" '{print $ 14} ~/amazon_reviews_us_Books_v1_02.tsv | head -n10 > review_bady
+ 1191  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n10 > review_bady
+ 1192  vi review_bady
+ 1193  ls
+ 1194  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1195  vi review_bady
+ 1196  awk -F"\t" '{print $ 13}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1197  vi review_bady
+ 1198  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1199  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > tr " " "\n" | sort | uniq -c| sort -n |less> review_bady
+ 1200  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > tr " " "\n">review_bady
+ 1201  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1202  vi review
+ 1203  vi review_bady
+ 1204  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > tr " " "\n">review_bady
+ 1205  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1206  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1207  vi review
+ 1208  sed -i ’s/[the]/ /g' review_bady
+ 1209  sed -i ’s/the/ /g' review_bady
+ 1210  vi review_bady
+ 1211  sed -i ’s/[,\.:]/ /g' review_bady
+ 1212  sed -i 's/the/ /g' review_bady
+ 1213  vi review_bady
+ 1214  sed -i 's/[the][t0]/ /g' review_bady
+ 1215  sed -i 's/[the][to]/ /g' review_bady
+ 1216  vi review_bady
+ 1217  sed -i 's/[the][to][it]/ /g' review_bady
+ 1218  vi review_bady
+ 1219  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1220  vi review_bady
+ 1221  sed -i 's/[ the ][ to ][ it ][ they ]/ /g' review_bady
+ 1222  vi review_bady
+ 1223  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1224  vi review_bady
+ 1225  sed -i 's/[ the ]/*/g' review_bady
+ 1226  vi review_bady
+ 1227  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1228  sed -i 's/ the /*/g' review_bady
+ 1229  vi review_bady
+ 1230  ls
+ 1231  gnuplot
+ 1232  gnuplot-main
+ 1233  apt install gnuplot-nox
+ 1234  cd gnuplot-main/
+ 1235  vi README  
+ 1236  ls
+ 1237  config
+ 1238  make
+ 1239  ls
+ 1240  ./config
+ 1241  vi RREADME
+ 1242  vi README  
+ 1243  ./configure
+ 1244  make
+ 1245  cd ..
+ 1246  wget http://ftp.cstug.cz/pub/CTAN/graphics/gnuplot/5.2.6/gnuplot-5.2.6.tar.gz
+ 1247  cd ~
+ 1248  ls
+ 1249  cd a3
+ 1250  ls
+ 1251  POST 
+ 1252  cd PRODUCTS/
+ 1253  gnuplot
+ 1254  gnuplot-5.2.6 
+ 1255  ~/gnuplot-5.2.6 
+ 1256  ls
+ 1257  cd a3
+ 1258  cd PRODUCTS/
+ 1259  ls
+ 1260  head -n 10 0060392452.txt.BINARY.txt
+ 1261  head -n 10 0060392452.txt
+ 1262  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0 else print $1,1}' $i > $i.BINARY.txt; done
+ 1263  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $i > $i.BINARY.txt; done
+ 1264  head -n 10 0060392452.txt.BINARY.txt
+ 1265  head -n 10 0060392452.txt
+ 1266  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1267  ls
+ 1268  vi 0439136350.txt.BINARY.txt.corrnorm.txt
+ 1269  vi 0399150897.txt.BINARY.txt.corrnorm.txt
+ 1270  for i in `ls ????????.corrnorm.txt`; do echo “$09; median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1271  ls
+ 1272  head -n 10 0060392452.txt.BINARY.txt
+ 1273  head -n 10 0060392452.txt
+ 1274  cd ~
+ 1275  ls
+ 1276  gnuplot-5.2.6
+ 1277  gnuplot
+ 1278  ssh -X
+ 1279  cd gnuplot-5.2.6
+ 1280  gnuplot
+ 1281  ./src/gnuplot
+ 1282  ls
+ 1283  cd gnuplot-5.2.6 
+ 1284  gnuplot
+ 1285  ./src/gnuplot
+ 1286  cd ~/a3/PRODUCTS/
+ 1287  ls
+ 1288  ls -latr
+ 1289  head -n 10 0060392452.txt.BINARY.txt
+ 1290  head -n 10 0060392452.txt
+ 1291  sort -n -k 2 0060392452.txt.BINARY.txt> 0060392452.txt.BINARY.txt.sorted
+ 1292  head -n 10 0060392452.txt.BINARY.txt.sorted
+ 1293  awk -F” “ ’{print NR,$1}’ 0060392452.txt.BINARY.txt.sorted > 0060392452.txt.BINARY.txt.sorted.ratings
+ 1294  awk -F" " '{print NR,$1}' 0060392452.txt.BINARY.txt.sorted > 0060392452.txt.BINARY.txt.sorted.ratings
+ 1295  head -n 10 0060392452.txt.BINARY.txt.sorted.ratings
+ 1296  awk -F" " '{print NR,$1}' 0060392452.txt.BINARY.txt.sorted > 0060392452.txt.BINARY.txt.sorted.helpful
+ 1297  awk -F" " '{print NR,$2}' 0060392452.txt.BINARY.txt.sorted > 0060392452.txt.BINARY.txt.sorted.helpful
+ 1298  head -n 10 0060392452.txt.BINARY.txt.sorted.helpful
+ 1299  vi 0060392452.txt.BINARY.txt.sorted.helpful
+ 1300  vi 0060392452.txt.BINARY.txt.sorted.ratings
+ 1301  ~/gnuplot-5.2.6/src/gnuplot
+ 1302  cd a3/PRODUCTS/
+ 1303  cd ~
+ 1304  ls
+ 1305  cd a3/PRODUCTS/
+ 1306  ~/gnuplot-5.2.6/src/gnuplot
+ 1307  cd a3/PRODUCTS/
+ 1308  gnuplot
+ 1309  ~/gnuplot-5.2.6/src/gnuplot
+ 1310  cd a3/PRODUCTS/
+ 1311  ~/gnuplot-5.2.6/src/gnuplot
+ 1312  ls
+ 1313  cd ~
+ 1314  ls
+ 1315  cd gnuplot-5.2.6
+ 1316  ls
+ 1317  ./src/gnuplot
+ 1318  cd src
+ 1319  ls
+ 1320  cd qtterminal
+ 1321  ls
+ 1322  cd ..
+ 1323  cp ~/a3/PRODUCTS/*.helpful .
+ 1324  ls
+ 1325  plot '0060392452.txt.BINARY.txt.sorted.helpful' with linespoints linestyle 1 linecolor 7
+ 1326  gnuplot
+ 1327  /gnuplot
+ 1328  ./gnuplot
+ 1329  cd a3/PRODUCTS/
+ 1330  ~/gnuplot-5.2.6/src/gnuplot
+ 1331  cd ~
+ 1332  brew install qt gnuplot
+ 1333  ls
+ 1334  cd gnuplot-5.2.6
+ 1335  ./src
+ 1336  cd a3
+ 1337  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1338  ls
+ 1339  vi review_bady
+ 1340  $ tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1341  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1342  vi review
+ 1343  sed -i ’s/\bthe\b\band\b/*/g’ review_bady
+ 1344  sed -i 's/\bthe\b\band\b/*/g' review_bady
+ 1345  vi review_bady 
+ 1346  sed -i 's/\bthe\b/*/g' review_bady
+ 1347  vi review_bady 
+ 1348  sed -i 's/\b*\b//g' review_bady
+ 1349  vi review_bady 
+ 1350  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1351  vi review_bady 
+ 1352  sed -i ’s/\bthe\b//g’ review_bady
+ 1353  sed -i 's/\bthe\b//g' review_bady
+ 1354  vi review_bady 
+ 1355  sed -i ’s/[a-z A-Z]??//g’ review_bady
+ 1356  sed -i 's/[a-z A-Z]??//g' review_bady
+ 1357  vi review_bady 
+ 1358  sed -i 's/[a-z A-Z]**//g' review_bady
+ 1359  sed -i 's/[a-z A-Z]**//g‘ review_bady
+ 1360  sed -i 's/[a-z A-Z]**//g' review_bady
+ 1361  sed -i 's/[a-Z]**//g' review_bady
+ 1362  sed -i 's/[a-z]**//g' review_bady
+ 1363  sed -i 's/a-z**//g' review_bady
+ 1364  sed -i 's/[a-z]**//g' review_bady
+ 1365  sed -i ’s/[[:alpha:]]{1,2}//g’ review_bady
+ 1366  sed -i 's/[[:alpha:]]{1,2}//g' review_bady
+ 1367  vi review_bady 
+ 1368  sed -i 's/[:alpha:]{1,2}//g' review_bady
+ 1369  sed -i 's/[[:alpha:]]{1,2}//g' review_bady
+ 1370  vi review_bady 
+ 1371  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1372  vi review_bady 
+ 1373  sed -i 's/[[:alpha:]]{1,2}//g' review_bady
+ 1374  vi review_bady 
+ 1375  sed -i 's/[[:alpha:]]**//g' review_bady
+ 1376  sed -i 's/[[:alpha:]]??//g' review_bady
+ 1377  vi review_bady 
+ 1378  sed -i 's/[[:alpha:]]__//g' review_bady
+ 1379  vi review_bady 
+ 1380  sed -i ’s/\bthe\b//g' review_bady
+ 1381  sed -i 's/\bthe\b//g' review_bady
+ 1382  vi review_bady 
+ 1383  sed -i ’s/\b[[:alpha:]]{1,2}\\b//g' review_bady
+ 1384  sed -i 's/\b[[:alpha:]]{1,2}\\b//g' review_bady
+ 1385  vi review_bady 
+ 1386  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1387  sed -i 's/\b[[:alpha:]]{1,2}\\b//g' review_bady
+ 1388  vi review_bady 
+ 1389  sed -i ’s/[??]/ /g' review_bady
+ 1390  sed -i 's/[??]/ /g' review_bady
+ 1391  vi review_bady 
+ 1392  sed -i 's/[\?\?]/ /g' review_bady
+ 1393  vi review_bady 
+ 1394  sed -i 's/[**]/ /g' review_bady
+ 1395  vi review_bady 
+ 1396  sed -i 's/[??]/ /g' review_bady
+ 1397  vi review_bady 
+ 1398  sed -i 's/[\?\?]/ /g' review_bady
+ 1399  vi review_bady 
+ 1400  sed -i 's/\?\?/ /g' review_bady
+ 1401  vi review_bady 
+ 1402  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1403  sed -i 's/??/ /g' review_bady
+ 1404  vi review_bady 
+ 1405  sed -i 's/??/ /g' review_bady
+ 1406  vi review_bady 
+ 1407  sed -i 's/\??/ /g' review_bady
+ 1408  vi review_bady 
+ 1409  sed -i ’s/[[a-z]]{1,2}//g’ review_bady
+ 1410  sed -i 's/[[a-z]]{1,2}//g' review_bady
+ 1411  vi review_bady 
+ 1412  sed -i 's/[a-z]{1,2}//g' review_bady
+ 1413  vi review_bady 
+ 1414  sed -i ’s/[a-z]\{4\}//g’ review_bady
+ 1415  sed -i 's/[a-z]\{4\}//g' review_bady
+ 1416  vi review_bady 
+ 1417  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1418  sed -i 's/[a-z]\{1\}//g' review_bady
+ 1419  vi review_bady 
+ 1420  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1421  sed -e 's/ [a-zA-Z0-9]\{4\} / /g' review_bady
+ 1422  sed -i 's/ [a-zA-Z0-9]\{4\} / /g' review_bady
+ 1423  vi review_bady 
+ 1424  sed -i 's/ [a-zA-Z0-9]\{2\} / /g' review_bady
+ 1425  vi review_bady 
+ 1426  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1427  vi review_bady 
+ 1428  awk -F"\t" '{print $ 14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 10 > review_bady
+ 1429  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1430  vi review_bady 
+ 1431  sed -i ’s/ the //g' review_bady
+ 1432  sed -i 's/ and / /g' review_bady
+ 1433  sed -i 's/ was / /g' review_bady
+ 1434  sed -i 's/ she / /g' review_bady
+ 1435  sed -i 's/ for / /g' review_bady
+ 1436  sed -i 's/ you / /g' review_bady
+ 1437  sed -i 's/ this / /g' review_bady
+ 1438  sed -i 's/ her / /g' review_bady
+ 1439  sed -i 's/ will / /g' review_bady
+ 1440  sed -i 's/ they / /g' review_bady
+ 1441  sed -i 's/ you / /g' review_bady
+ 1442  sed -i 's/ this / /g' review_bady
+ 1443  sed -i 's/ her / /g' review_bady
+ 1444  sed -i 's/ will / /g' review_bady
+ 1445  sed -i 's/ the / /g' review_bady
+ 1446  sed -i 's/ and / /g' review_bady
+ 1447  sed -i 's/ was / /g' review_bady
+ 1448  sed -i 's/ she / /g' review_bady
+ 1449  sed -i 's/ for / /g' review_bady
+ 1450  sed -i 's/ you / /g' review_bady
+ 1451  sed -i 's/ this / /g' review_bady
+ 1452  sed -i 's/ her / /g' review_bady
+ 1453  sed -i 's/ will / /g' review_bady
+ 1454  sed -i 's/ they / /g' review_bady
+ 1455  sed -i 's/ you / /g' review_bady
+ 1456  sed -i 's/ this / /g' review_bady
+ 1457  sed -i 's/ her / /g' review_bady
+ 1458  sed -i 's/ will / /g' review_bady
+ 1459  sed -i 's/ they / /g' review_bady
+ 1460  vi review_bady 
+ 1461  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1462  vi review
+ 1463  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" '{print $9,$14}’ > review_bady
+ 1464  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" '{print $9,$14}' > review_bady
+ 1465  vi review_bady 
+ 1466  sed -i 's/ the / /g' review_bady
+ 1467  sed -i 's/ and / /g' review_bady
+ 1468  sed -i 's/ was / /g' review_bady
+ 1469  sed -i 's/ she / /g' review_bady
+ 1470  sed -i 's/ for / /g' review_bady
+ 1471  sed -i 's/ you / /g' review_bady
+ 1472  sed -i 's/ this / /g' review_bady
+ 1473  sed -i 's/ her / /g' review_bady
+ 1474  sed -i 's/ will / /g' review_bady
+ 1475  sed -i 's/ they / /g' review_bady
+ 1476  sed -i 's/ that / /g' review_bady
+ 1477  sed -i 's/ but / /g' review_bady
+ 1478  sed -i 's/ about / /g' review_bady
+ 1479  sed -i 's/ will / /g' review_bady
+ 1480  sed -i 's/ they / /g' review_bady
+ 1481  sed -i 's/<...\/>//g' 52173832_review.txt
+ 1482  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1483  sed -i 's/<...\/>//g' review_bady
+ 1484  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1485  vi review
+ 1486  sed -i 's/<...>//g' review_bady
+ 1487  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1488  vi review
+ 1489  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1490  vi review
+ 1491  sed -i ’s/[,\.:]/ /g' review_bady
+ 1492  sed -i 's/[,\.:]/ /g' review_bady
+ 1493  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1494  vi review
+ 1495  sed -i 's/[,\.:"]/ /g' review_bady
+ 1496  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1497  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1498  vi review
+ 1499  sed -i ’s/[,\.:”()]/ /g' review_bady
+ 1500  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1501  sed -i ’s/[,\.:”\(\)]/ /g' review_bady
+ 1502  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1503  sed -i 's/[,\.:"\(\)]/ /g' review_bady
+ 1504  tr " " "\n" < review_bady | sort | uniq -c| sort -n |less > review
+ 1505  vi review
+ 1506  tr " " "\n" < review_bady | sort | uniq -c| sort -n |more > review
+ 1507  vi review
+ 1508  tr " " "\n" < review_bady | sort | uniq -c| sort -n | less > review
+ 1509  vi review
+ 1510  tr " " "\n" < review_bady | sort | uniq -c| sort -n -R| less > review
+ 1511  tr " " "\n" < review_bady | sort | uniq -c| sort -n -r| less > review
+ 1512  vi review
+ 1513  history
+ 1514  ls
+ 1515  cp CUSTOMERS/
+ 1516  cd CUSTOMERS/
+ 1517  ls
+ 1518  head 50378566.txt
+ 1519  cd ~
+ 1520  cd a3
+ 1521  ls
+ 1522  median=`sort -n -k 2 PRODUCTS/50378566.txt | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`
+ 1523  cd PRODUCTS/
+ 1524  ls
+ 1525  vi 0060392452.txt
+ 1526  cd ~
+ 1527  cd a3
+ 1528  median=`sort -n -k 2 PRODUCTS/0060392452.txt | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`
+ 1529  echo $median
+ 1530  man awk -v
+ 1531  awk -v median=$median '$2 < median {print $1,$2}'review_bady > review_bady_0
+ 1532  awk -v median=$median '$2 < median {print $1,$2}'review_bady
+ 1533  ls
+ 1534  vi awk -v median=$median '$2 < median {print $1,$2}'review_bady > review_bady_0
+ 1535  cd a3/PRODUCTS/
+ 1536  ~/gnuplot-5.2.6/src/gnuplot
+ 1537  cd ~
+ 1538  sudo apt-get update -y
+ 1539  export GNUTERM=qt
+ 1540  gnuplot
+ 1541  apt install gnuplot-qt
+ 1542  y
+ 1543  cd gnuplot-5.2.6
+ 1544  ./src/gnuplot
+ 1545  cd src
+ 1546  ls
+ 1547  set terminal
+ 1548  set terminal qtterminal
+ 1549  ./gnuplot
+ 1550  cd ~
+ 1551  cd a3/PRODUCTS/
+ 1552  ~/gnuplot-5.2.6/src/gnuplot
+ 1553  vi 0060392452.txt.BINARY.txt.sorted.helpful
+ 1554  vi 0060392452.txt.BINARY.txt.sorted.ratings
+ 1555  ~/gnuplot-5.2.6/src/gnuplot
+ 1556  vi ../PRODUCTS/0060392452.txt.BINARY.txt.sorted.helpful
+ 1557  vi ../PRODUCTS/0060392452.txt.BINARY.txt.sorted.ratings
+ 1558  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" '{print $9,$14}' > review_bady
+ 1559  sed -i 's/ the / /g' review_bady
+ 1560  sed -i 's/ and / /g' review_bady
+ 1561  sed -i 's/ was / /g' review_bady
+ 1562  sed -i 's/ she / /g' review_bady
+ 1563  sed -i 's/ for / /g' review_bady
+ 1564  sed -i 's/ you / /g' review_bady
+ 1565  sed -i 's/ this / /g' review_bady
+ 1566  sed -i 's/ her / /g' review_bady
+ 1567  sed -i 's/ will / /g' review_bady
+ 1568  sed -i 's/ they / /g' review_bady
+ 1569  sed -i 's/ that / /g' review_bady
+ 1570  sed -i 's/ but / /g' review_bady
+ 1571  sed -i 's/ about / /g' review_bady
+ 1572  sed -i 's/<...\/>//g' review_bady
+ 1573  sed -i 's/<...>//g' review_bady
+ 1574  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1575  sed -i 's/[,\.:"\(\)]/ /g' review_bady
+ 1576  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1577  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r|less > review_0
+ 1578  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_1
+ 1579  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1580  head -n 10 review_0 review_1
+ 1581  vi review_bady_0
+ 1582  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1583  vi review_bady_0
+ 1584  vi review_bady
+ 1585  awk '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1586  vi review_bady_0
+ 1587  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1588  vi review_bady_0
+ 1589  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_1
+ 1590  vi review_bady_1
+ 1591  median=`sort -n -k 2 PRODUCTS/0060392452.txt | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`
+ 1592  echo $median
+ 1593  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" -v OFS='\t' '{print $9,$14}' > review_bady
+ 1594  sed -i 's/ the / /g' review_bady
+ 1595  sed -i 's/ and / /g' review_bady
+ 1596  sed -i 's/ was / /g' review_bady
+ 1597  sed -i 's/ she / /g' review_bady
+ 1598  sed -i 's/ for / /g' review_bady
+ 1599  sed -i 's/ you / /g' review_bady
+ 1600  sed -i 's/ this / /g' review_bady
+ 1601  sed -i 's/ her / /g' review_bady
+ 1602  sed -i 's/ will / /g' review_bady
+ 1603  sed -i 's/ they / /g' review_bady
+ 1604  sed -i 's/ that / /g' review_bady
+ 1605  sed -i 's/ but / /g' review_bady
+ 1606  sed -i 's/ about / /g' review_bady
+ 1607  sed -i 's/<...\/>//g' review_bady
+ 1608  sed -i 's/<...>//g' review_bady
+ 1609  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1610  sed -i 's/[,\.:"\(\)]/ /g' review_bady
+ 1611  sort -n -k 1 review_bady > sorted
+ 1612  head -n 490 sorted>review_bady_0
+ 1613  tail -n 489 sorted>review_bady_1
+ 1614  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1615  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1616  head -n 10 review_0 review_1
+ 1617  cd a3/PRODUCTS/
+ 1618  for i in `ls ??????????.txt`; do echo "$i `sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)]; }'`" ; done > median.txt
+ 1619  for i in `ls ??????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $i > $i.BINARY.txt; done
+ 1620  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1621  cd ~/a3/CUSTOMERS/
+ 1622  for i in `ls ????????.txt`; do echo "$i `sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)]; }'`" ; done > median.txt
+ 1623  for i in `ls ????????.txt`; do median=`sort -n -k 2 $i | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`;  awk '{ if ($median < $2) print $1,0; else print $1,1}' $i > $i.BINARY.txt; done
+ 1624  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1625  cd ~/a3/PRODUCTS/
+ 1626  head -n 10 0060392452.txt.BINARY.txt 0060392452
+ 1627  head -n 10 0060392452.txt.BINARY.txt 0060392452.txt
+ 1628  cd ..
+ 1629  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" -v OFS='\t' '{print $9,$14}' > review_bady
+ 1630  sed -i 's/ the / /g' review_bady
+ 1631  sed -i 's/ and / /g' review_bady
+ 1632  sed -i 's/ was / /g' review_bady
+ 1633  sed -i 's/ she / /g' review_bady
+ 1634  sed -i 's/ for / /g' review_bady
+ 1635  sed -i 's/ you / /g' review_bady
+ 1636  sed -i 's/ this / /g' review_bady
+ 1637  sed -i 's/ her / /g' review_bady
+ 1638  sed -i 's/ will / /g' review_bady
+ 1639  sed -i 's/ they / /g' review_bady
+ 1640  sed -i 's/ that / /g' review_bady
+ 1641  sed -i 's/ but / /g' review_bady
+ 1642  sed -i 's/ about / /g' review_bady
+ 1643  sed -i 's/<...\/>//g' review_bady
+ 1644  sed -i 's/<...>//g' review_bady
+ 1645  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' review_bady
+ 1646  sed -i 's/[,\.:"\(\)]/ /g' review_bady
+ 1647  sort -n -k 1 review_bady > sorted
+ 1648  head -n 490 sorted>review_bady_0
+ 1649  tail -n 489 sorted>review_bady_1
+ 1650  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1651  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1652  head -n 10 review_0 review_1
+ 1653  cd a3
+ 1654  ls
+ 1655  vi review_bady_0
+ 1656  awk '{ if ($median < $2) {print $1,$2} review_bady > review_bady_0
+ 1657  awk '{ if ($median < $2) {print $1,$2}' review_bady > review_bady_0
+ 1658  awk '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1659  vi review_bady_0
+ 1660  awk '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1661  ls
+ 1662  vi review_bady_0
+ 1663  head -n10 review_bady_0
+ 1664  head -n10 review_bady
+ 1665  sed -i "s/^/\t/g" review_bady
+ 1666  awk '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1667  vi review_bady_0
+ 1668  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" -v OFS='\t' '{print $9,$14}' > review_bady
+ 1669  awk '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1670  vi review_bady_0
+ 1671  vi review_bady
+ 1672  awk '{ if ($median < $2) -F"\t" -v OFS='\t' {print $1,$2}}' review_bady > review_bady_0
+ 1673  awk '{ if ($median < $2) -F"\t" -v OFS="\t" {print $1,$2}}' review_bady > review_bady_0
+ 1674  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1675  vi review_bady_0
+ 1676  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_1
+ 1677  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n |less > review_1
+ 1678  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1679  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r|less > review_0
+ 1680  head -n review_0 review_1
+ 1681  head -n 10 review_0 review_1
+ 1682  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_1
+ 1683  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1684  head -n 10 review_0 review_1
+ 1685  script a3.txt
+ 1686  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" '{print $9,$14}' > review_bady
+ 1687  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1688  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_1
+ 1689  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1690  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1691  head -n 10 review_0 review_1
+ 1692  vi review_bady_0
+ 1693  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_11
+ 1694  vi review_bady_11
+ 1695  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1696  vi review_bady_0
+ 1697  wc review_bady_11
+ 1698  wc review_bady
+ 1699  median=`sort -n -k 2 0060392452 | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'` 0060392452.txt
+ 1700  ls
+ 1701  cd PRODUCTS/
+ 1702  cp 0060392452.txt ~/a3/0060392452.txt
+ 1703  cd ..
+ 1704  ls
+ 1705  median=`sort -n -k 2 0060392452 | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'` 0060392452.txt
+ 1706  ls
+ 1707  median=`sort -n -k 2 PRODUCTS/0060392452.txt | awk '{ a[i++] = $2 } END { print a[int(i/2)];}'`
+ 1708  awk -F"\t" -v OFS='\t' '{ if ($median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1709  awk -F"\t" -v OFS='\t' '{ if ($median > $2) {print $1,$2}}' review_bady > review_bady_1
+ 1710  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1711  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1712  head -n 10 review_0 review_1
+ 1713  echo $median
+ 1714  head -n 10 review_bady_0 review_bady_1
+ 1715  head -n 10 review_bady_0
+ 1716  vi review_bady_0
+ 1717  wc review_bady_0
+ 1718  wc review_bady
+ 1719  wc review_bady_1
+ 1720  awk -F"\t" -v OFS='\t' '{ if (median > $2) {priawk -F"\t" -v OFS='\t' -v median=$median '{ if (median < $2) {print $1,$2}}' review_bady > review_bady_0nt $1,$2}}' review_bady > review_bady_1
+ 1721  wc review_bady_1
+ 1722  echo median
+ 1723  awk -F"\t" -v OFS='\t' -v median=$median '{ if (median < $2) {print $1,$2}}' review_bady > review_bady_0
+ 1724  wcreview_bady_0
+ 1725  wc review_bady_0
+ 1726  awk -F"\t" -v OFS='\t' -v median=$median 'median < $2 {print $1,$2}' review_bady > review_bady_0
+ 1727  wc review_bady_0
+ 1728  awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $i > $i.BINARY.txt; done
+ 1729  awk -F"\t" -v OFS='\t' '{ if ($median < $1) {print $1,$2}}' review_bady > review_bady_0
+ 1730  awk -F"\t" -v OFS='\t' '{ if ($median > $1) {print $1,$2}}' review_bady > review_bady_1
+ 1731  wc review_bady_0
+ 1732  vi review_bady
+ 1733  ls
+ 1734  grep "0060392452" ../amazon_reviews_us_Books_v1_02.tsv | awk -F"\t" -v OFS='\t' '{print $9,$14}' > review_bady
+ 1735  vi review_bady
+ 1736  awk -F"\t" -v OFS='\t' '{ if ($median < $1) {print $1,$2}}' review_bady > review_bady_0
+ 1737  awk -F"\t" -v OFS='\t' '{ if ($median > $1) {print $1,$2}}' review_bady > review_bady_1
+ 1738  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1739  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1740  head -n 10 review_0 review_1
+ 1741  echo $median
+ 1742  wc review_bady
+ 1743  wc review_bady_0
+ 1744  wc review_bady_1
+ 1745  vi review_bady
+ 1746  awk -F"\t" -v OFS='\t'; awk '{ if ($median < $1) print $1,$2}' review_bady > review_bady_0
+ 1747  ls
+ 1748  rm review_bady_11
+ 1749  rm tr
+ 1750  ls
+ 1751  sort -n -k 1 review_bady
+ 1752  sort -n -k 1 review_bady > sorted
+ 1753  ls
+ 1754  wc sorted
+ 1755  head -n 485 sorted>review_bady_0
+ 1756  tail -n 489 sorted>review_bady_0
+ 1757  head -n 490 sorted>review_bady_0
+ 1758  tail -n 489 sorted>review_bady_1
+ 1759  tr " " "\n" < review_bady_0 | sort | uniq -c| sort -n -r |less > review_0
+ 1760  tr " " "\n" < review_bady_1 | sort | uniq -c| sort -n -r |less > review_1
+ 1761  head -n 10 review_0 review_1
+ 1762  ls
+ 1763  script a3.txt
+ 1764  cp a3.txt ~a3_10.txt
+ 1765  cd !
+ 1766  cd ~
+ 1767  ls
+ 1768  l
+ 1769  ls
+ 1770  vi a3.txt_1_2 
+ 1771  vi a3.txt_4   
+ 1772  cd a3
+ 1773  ls
+ 1774  cd ~
+ 1775  script a3.txt
+ 1776  ls
+ 1777  vi a3.txt
+ 1778  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a3.txt > a3.txt.clean
+ 1779  tr -cd '\11\12\15\40-\176' < a3.txt.clean > a3.txt.clean2
+ 1780  vi a3.txt.clean2
+ 1781  mv a3.txt.clean2 a3
+ 1782  cd a3
+ 1783  ls
+ 1784  cd PRODUCTS/
+ 1785  ls
+ 1786  vi xyz.svg
+ 1787  cp 0060392452.txt.BINARY.txt.sorted.helpful ~
+ 1788  cp 0060392452.txt.BINARY.txt.sorted.ratings ~
+ 1789  cd ~
+ 1790  ls
+ 1791  mkdir a33
+ 1792  mv 0060392452.txt.BINARY.txt.sorted.helpful a33
+ 1793  mv 0060392452.txt.BINARY.txt.sorted.ratings a33
+ 1794  cd a33
+ 1795  ls
+ 1796  git init
+ 1797  git add 0060392452.txt.BINARY.txt.sorted.helpful 0060392452.txt.BINARY.txt.sorted.ratings
+ 1798  git commit -m "first commit"
+ 1799  git remote add origin https://github.com/Serena-Shiting/a33.git
+ 1800  git branch -M main
+ 1801  git push -u origin main
+ 1802  history
+ 1803  cd ~
+ 1804  cd a3
+ 1805  cd CUSTOMERS/
+ 1806  l
+ 1807  for i in `ls *.BINARY.txt` ; do CORR=`./datamash  -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1808  for i in `ls *.BINARY.txt` ; do CORR=`~/datamash  -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1809  cd ~/datamash-1.3./datamash
+ 1810  cd ~/datamash-1.3
+ 1811  for i in `~/a2/CUSTOMERS/*` ; do CORR=`./datamash  -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1812  sort -nk2 correlation.txt 
+ 1813  for i in `~/a2/CUSTOMERS/*` ; do CORR=`./datamash  -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1814  for i in `~/a3/CUSTOMERS/*` ; do CORR=`./datamash  -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1815  cd ~/a3/PRODUCTS/
+ 1816  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash CORR=`./datamash -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1817  for i in `ls *.BINARY.txt` ; do ~/datamash-1.3/datamash -W ppearson 1:2 < $i > $i.corrnorm.txt;done
+ 1818  for i in `ls *.BINARY.txt` ; do CORR=` ~/datamash-1.3/datamash -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1819  sort -nk2 correlation.txt 
+ 1820  sort -n -k 2 0060875410.txt.BINARY.txt> 0060875410.txt.BINARY.txt.sorted
+ 1821  head -n 10 0060875410.txt.BINARY.txt.sorted
+ 1822  awk -F" " '{print NR,$1}' 0060875410.txt.BINARY.txt.sorted > 0060875410.txt.BINARY.txt.sorted.ratings
+ 1823  awk -F" " '{print NR,$2}' 0060392452.txt.BINARY.txt.sorted > 0060392452.txt.BINARY.txt.sorted.helpful
+ 1824  cp 0060875410.txt.BINARY.txt.sorted.ratings 0060392452.txt.BINARY.txt.sorted.helpful ~a33
+ 1825  cp 0060875410.txt.BINARY.txt.sorted.ratings 0060392452.txt.BINARY.txt.sorted.helpful ~/a33
+ 1826  cd ~/a3/CUSTOMERS/
+ 1827  for i in `ls *.BINARY.txt` ; do CORR=` ~/datamash-1.3/datamash -W ppearson 1:2 < $i`;echo "$i $CORR"; done > correlation.txt 
+ 1828  sort -nk2 correlation.txt |tail -n 3
+ 1829  sort -n -k 2 53071109.txt.BINARY.txt> 53071109.txt.BINARY.txt.sorted
+ 1830  awk -F" " '{print NR,$1}' 53071109.txt.BINARY.txt.sorted > 53071109.txt.BINARY.txt.sorted.ratings
+ 1831  awk -F" " '{print NR,$2}' 53071109.txt.BINARY.txt.sorted > 53071109.txt.BINARY.txt.sorted.helpful
+ 1832  cp 53071109.txt.BINARY.txt.sorted.ratings 53071109.txt.BINARY.txt.sorted.helpful
+ 1833  cp 53071109.txt.BINARY.txt.sorted.ratings 53071109.txt.BINARY.txt.sorted.helpful ~/a33
+ 1834  cd ~
+ 1835  cd a33
+ 1836  ls
+ 1837  cd ~a3
+ 1838  cd ~/a3/P
+ 1839  cd ~/a3/PRODUCTS/
+ 1840  cp 0060875410.txt.BINARY.txt.sorted.helpful ~/a33
+ 1841  sort -n -k 2 0060875410.txt.BINARY.txt> 0060875410.txt.BINARY.txt.sorted
+ 1842  awk -F" " '{print NR,$1}' 0060875410.txt.BINARY.txt.sorted > 0060875410.txt.BINARY.txt.sorted.ratings
+ 1843  awk -F" " '{print NR,$2}' 0060875410.txt.BINARY.txt.sorted > 0060875410.txt.BINARY.txt.sorted.helpful
+ 1844  cp 0060875410.txt.BINARY.txt.sorted.helpful ~/a33
+ 1845  cd ~/a33
+ 1846  ls
+ 1847  git add 0060392452.txt.BINARY.txt.sorted.helpful  0060875410.txt.BINARY.txt.sorted.ratings
+ 1848  0060392452.txt.BINARY.txt.sorted.ratings  53071109.txt.BINARY.txt.sorted.helpful
+ 1849  0060875410.txt.BINARY.txt.sorted.helpful  53071109.txt.BINARY.txt.sorted.ratings
+ 1850  git add 0060392452.txt.BINARY.txt.sorted.ratings  53071109.txt.BINARY.txt.sorted.helpful 0060875410.txt.BINARY.txt.sorted.helpful  53071109.txt.BINARY.txt.sorted.ratings
+ 1851  git commit
+ 1852  git push origin master
+ 1853  history
+ 1854  git push -u origin main
+ 1855  cd ~/a3
+ 1856  git init
+ 1857  ls
+ 1858  history > cmds.log
+ 1859  ls
+ 1860  git add a3.txt.clean2 cmds.log
+ 1861  git commit -m "first commit"
+ 1862  git remote add origin https://github.com/Serena-Shiting/a3.git
+ 1863  git branch -M main
+ 1864  git push -u origin main
+ 1865  mkdir ws8
+ 1866  cd ws8
+ 1867  head -n 100 ../amazon_reviews_us_Books_v1_02.tsv > 99reviews 
+ 1868  head -n 1 ../amazon_reviews_us_Books_v1_02.tsv
+ 1869  head -n 2 ../amazon_reviews_us_Books_v1_02.tsv
+ 1870  awk -F "\t" '{if ($11 == 'Y') {print $11,$13}}' > review_body
+ 1871  awk -F "\t" '{if ($11 == 'Y') {print $11,$13}}' 99reviews> review_body
+ 1872  vi review_body
+ 1873  awk -F "\t" '{if ($11 == 'Y') {print $11,$13}}' 99reviews
+ 1874  awk -F "\t" '{if ($11 == 'Y') {print 0}}' 99reviews
+ 1875  grep 'Y' 99reviews | awk -F "\t" '{print $11,$13}' 99reviews> review_body
+ 1876  vi review_body
+ 1877  grep 'Y' 99reviews | awk -F "\t" '{print $12,$13}' 99reviews> review_body
+ 1878  vi review_body
+ 1879  awk -F "\t" '{if ($11 == 'Y') {print $11,$13}}' 99reviews> review_body
+ 1880  vi review_body
+ 1881  awk -F "\t" '{if ($11 = 'Y') {print $11,$13}}' 99reviews> review_body
+ 1882  vi review_body
+ 1883  awk '$11 == 'Y' {print $11,13}' 99reviews> review_body
+ 1884  vi review_body
+ 1885  awk '$11 = 'Y' {print $11,13}' 99reviews> review_body
+ 1886  vi review_body
+ 1887  awk '1<2 {print $11,13}' 99reviews> review_body
+ 1888  vi review_body
+ 1889  awk '1<2 {print $11,$13}' 99reviews> review_body
+ 1890  vi review_body
+ 1891  awk '1<2 {print $11,$13}' 99reviews> review_body
+ 1892  awk -F "\t" '1<2 {print $11,13}' 99reviews> review_body
+ 1893  vi review_body
+ 1894  awk -F "\t" '1<2 {print $11,$13}' 99reviews> review_body
+ 1895  vi review_body
+ 1896  awk -F "\t" '{if ($11 == 'N') {print $11,$13}}' 99reviews> review_body
+ 1897  vi review_body
+ 1898  grep 'N' 99reviews | awk -F "\t" '{print $11,$13}' 99reviews> review_body
+ 1899  vi review_body
+ 1900  awk -F "\t" '{if ($11 == 'N') {print $11,$13}}' 99reviews> review_body
+ 1901  vi review_body
+ 1902  awk -F "\t" '$11 == 'N' {print $11,$13}' 99reviews> review_body
+ 1903  vi review_body
+ 1904  head -n 1000 ../amazon_reviews_us_Books_v1_02.tsv > 99reviews 
+ 1905  grep 'N' 99reviews | awk -F "\t" '{print $11,$13}' 99reviews> review_body
+ 1906  vi review_body
+ 1907  grep 'N' 99reviews | awk -F "\t" '{print $12,$13}' 99reviews> review_body
+ 1908  vi review_body
+ 1909  grep 'Y' 99reviews | awk -F "\t" '{print $12,$13}' 99reviews> review_body
+ 1910  vi review_body
+ 1911  awk -F "\t" '$11 == 'Y' {print $12,$13}' 99reviews> review_body
+ 1912  vi review_body
+ 1913  awk -F "\t" '{if ($11 == 'Y') {print $12,$13}}' 99reviews> review_body
+ 1914  vi review_body
+ 1915  awk -F "\t" '$11 > 'N' {print $12,$13}' 99reviews> review_body
+ 1916  vi review_body
+ 1917  awk -F "\t" '$12 > 'N' {print $12,$13}' 99reviews> review_body
+ 1918  vi review_body
+ 1919  awk -F "\t" '$12 > 'Y' {print $12,$13}' 99reviews> review_body
+ 1920  vi review_body
+ 1921  awk -F "\t" '$11 = 'N' {print $12,$13}' 99reviews> review_body
+ 1922  vi review_body
+ 1923  grep 'N' 99reviews | awk -F "\t" '{print $12,$13}' 99reviews> review_body
+ 1924  vi review_body
+ 1925  grep Y 99reviews | awk -F "\t" '{print $12,$13}' 99reviews> review_bodya grep Y | awk -F "\t" '{print $12,$13}' 99reviews> review_bodya
+ 1926  vi review_body
+ 1927  grep Y | awk -F "\t" '{print $12,$13}' 99reviews> review_bodya
+ 1928  awk -F "\t" '{print $12,$13}' | grep Y 99reviews > review_bodya
+ 1929  awk -F "\t" '{print $12,$13}' | grep Y 99reviews > review_body
+ 1930  awk -F "\t" '{print $12,$13}' | grep Y 99reviews
+ 1931  awk -F "\t" '{print $12,$13}' | grep Y 99reviews > review_body
+ 1932  vi review_body
+ 1933  grep Y | awk -F "\t" '{print $12,$13}' 99reviews > review_body
+ 1934  vi review_body
+ 1935  awk -F "\t" '{print $12,$13}' 99reviews | grep Y > review_body
+ 1936  vi review_body
+ 1937  awk -F "\t" '{if ($12 == Y) {print $12,$13}}' 99reviews> review_body
+ 1938  vi review_body
+ 1939  awk -F "\t" '$12 = N {print $12,$13}' 99reviews> review_body
+ 1940  vi review_body
+ 1941  awk -F "\t" '{if (2>1) {print $12,$13}}' 99reviews> review_body
+ 1942  vi review_body
+ 1943  awk -F "\t" '{if (1<2) {print $12,$13}}' 99reviews> review_body
+ 1944  vi review_body
+ 1945  awk -F "\t" '1>2 {print $12,$13}' 99reviews> review_body
+ 1946  vi review_body
+ 1947  awk -F "\t" '1<2 {print $12,$13}' 99reviews> review_body
+ 1948  vi review_body
+ 1949  awk -F "\t" '$12 > N {print $12,$13}' 99reviews> review_body
+ 1950  vi review_body
+ 1951  vi review_body
+ 1952  awk -F "\t" '$12 == N {print $12,$13}' 99reviews> review_body
+ 1953  vi review_body
+ 1954  awk -F "\t" '$12 != N {print $12,$13}' 99reviews> review_body
+ 1955  vi review_body
+ 1956  awk -F "\t" '{echo $12}' 99reviews> review_body
+ 1957  vi review_body
+ 1958  awk -F "\t" echo $12 99reviews> review_body
+ 1959  awk -F "\t" '{print $12,$13}' 99reviews> 999review
+ 1960  vi 999review
+ 1961  awk -F "\t" '$1 == N {print $1,$2}' 999reviews> review_body
+ 1962  awk -F "\t" '$1 == N {print $1,$2}' 999review> review_body
+ 1963  vi review_body
+ 1964  awk -F "\t" '$1 != N {print $1,$2}' 999review> review_body
+ 1965  vi review_body
+ 1966  awk -F "\t" echo $12 99reviews> review_body
+ 1967  sed s/o+/ooo/  
+ 1968  sed s/[o+]/ooo/  
+ 1969  sed s/[o+]/ooo/g  
+ 1970  sed s/[o+*]/ooo/g  
+ 1971  sed s/o/ooo/g  
+ 1972  vi review_body
+ 1973  awk -F "\t" '$12 != N {print $12,$13}' 99reviews> review_body
+ 1974  vi review_body
+ 1975  awk -F : '$12 != N {print $12,$13}' 99reviews> review_body
+ 1976  vi review_body
+ 1977  awk -F "\t" '$12 != N {print $12,$13}' 99reviews> review_body
+ 1978  awk -F "\t" -f file 99reviews> review_body
+ 1979  vi file
+ 1980  awk -F "\t" -f file 99reviews> review_body
+ 1981  vi review_body
+ 1982  vi file
+ 1983  vi review_body
+ 1984  awk -F "\t" -f file 99reviews> review_body
+ 1985  vi review_body
+ 1986* 
+ 1987  awk -F "\t" -f file 99reviews> review_body
+ 1988  vi review_body
+ 1989  vi file
+ 1990  awk -F "\t" -f file 99reviews> review_body
+ 1991  vi review_body
+ 1992  cd ws8
+ 1993  ls
+ 1994  for i in `cat 999review | awk -F '\t' '{print $12}'`; do grep Y $i > review_bodya
+ 1995  for i in `cat 999review | awk -F '\t' '{print $12}'`; do grep 'Y' $i > review_bodya
+ 1996  for i in `cat 999review | awk -F '\t' '{print $12}'`; do grep 'Y' '$i' > review_bodya
+ 1997  for i in `cat 999review | awk -F '\t' '{print $12}'`; do grep Y '$i' > review_bodya
+ 1998  vi file
+ 1999  awk -F "\t" -f file `cat 99reviews | awk -F '\t' '{print $12}'`> review_body
+ 2000  awk -F "\t" -f file 99reviews> review_body
+ 2001  awk -f file | `cat 99reviews | awk -F '\t' '{print $12}'`> review_body
+ 2002  for i in `cat 99reviews | awk -F '\t' '{print $12}'` | awk -f file > review_body
+ 2003  for i in `cat 99reviews | awk -F '\t' '{print $12}'`  awk -f file > review_body
+ 2004  for i in `cat 99reviews | awk -F '\t' '{print $12}'`；  awk -f file > review_body
+ 2005  for i in `cat 99reviews | awk -F '\t' '{print $12}'`;  awk -f file > review_body
+ 2006  for i in `cat 99reviews | awk -F '\t' '{print $12}'`  awk -f file;done > review_body
+ 2007  for i in `cat 99reviews | awk -F '\t' '{print $12}'` ; awk -f file;done > review_body
+ 2008  awk -F "\t" '$12 == N {print $12,$13}' 99reviews> review_body
+ 2009  vi review_body
+ 2010  awk -F "\t" '$12 != N {print $12,$13}' 99reviews> review_body
+ 2011  vi review_body
+ 2012  awk -F "\t" '$12 != 'N' {print $12,$13}' 99reviews> review_body
+ 2013  vi review_body
+ 2014  cd ~ws6
+ 2015  cd ~/ws6
+ 2016  ls
+ 2017  cd ..
+ 2018  ls
+ 2019  vi cronfile
+ 2020  vi cronfile1
+ 2021  cd ws8
+ 2022  awk -F "\t" 'if(match($12,N)) {print $12,$13}' 99reviews> review_body
+ 2023  awk -F "\t" 'if(match($12,N)); {print $12,$13}' 99reviews> review_body
+ 2024  vi file
+ 2025  awk -F "\t" -f file 99reviews> review_body
+ 2026  vi review_body
+ 2027  vi file
+ 2028  awk -F "\t" -f file 99reviews> review_body
+ 2029  vi review_body
+ 2030  vi file
+ 2031  awk -F "\t" -v Y=Y -f file 99reviews> review_body
+ 2032  vi review_body
+ 2033  awk -F "\t" -f file 99reviews> review_body
+ 2034  vi review_body
+ 2035  vi file
+ 2036  awk -F "\t" -v verified=Y -f file 99reviews> review_body
+ 2037  vi review_body
+ 2038  awk -F "\t" -v verified=N -f file 99reviews> review_body
+ 2039  vi review_body
+ 2040  vi file
+ 2041  awk -F "\t" -v verified=Y -f file amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2042  awk -F "\t" -v verified=N -f file amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+ 2043  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2044  awk -F "\t" -v verified=N -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+ 2045  ls
+ 2046  vi verified.txt
+ 2047  vi file
+ 2048  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2049  awk -F "\t" -v verified=N -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+ 2050  vi verified.txt
+ 2051  vi subFile
+ 2052  sed -f subFile verified.txt
+ 2053  sed -i -f subFile verified.txt
+ 2054  vi verified.txt
+ 2055  tr " " "\n" < verified.txt | sort | uniq -c| sort -n -r > ver_f
+ 2056  vi ver_f
+ 2057  vi verified.txt
+ 2058  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2059  vi verified.txt
+ 2060  sed -i -f subFile verified.txt
+ 2061  vi verified.txt
+ 2062  sed -i 's/ [a-zA-Z0-9]\{1,2\} / /g' verified.txt
+ 2063  vi verified.txt
+ 2064  sed -i 's/[a-zA-Z0-9]\{1,2\}/ /g' verified.txt
+ 2065  vi verified.txt
+ 2066  sed -i ’s/\b[a-zA-Z]\{1,2\}\b//g' verified.txt
+ 2067  sed -i 's/\b[a-zA-Z]\{1,2\}\b//g' verified.txt
+ 2068  vi verified.txt
+ 2069  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2070  sed -i 's/\b[a-zA-Z]\{1,2\}\b//g' verified.txt
+ 2071  vi verified.txt
+ 2072  vi subFile 
+ 2073  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2074  sed -i -f subFile verified.txt
+ 2075  tr " " "\n" < verified.txt | sort | uniq -c| sort -n -r > review_0
+ 2076  vi verified.txt
+ 2077  vi review_0
+ 2078  vi subFile 
+ 2079  awk -F "\t" -v verified=Y -f file ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+ 2080  sed -i -f subFile verified.txt
+ 2081  tr " " "\n" < verified.txt | sort | uniq -c| sort -n -r > review_0
+ 2082  vi review_0
+ 2083  cd ~
+ 2084  cd ws8
+ 2085  script ws8.txt
+ 2086  vi unver_f
+ 2087  script ws8.txt
+ 2088  git init
+ 2089  history > cmds.log
